@@ -1,5 +1,6 @@
 # clusteringHumano
 Este proyecto está compuesto por las siguientes clases: CargaDatosInicial, VistaDatos, Clustering, Grafo y BFS.
+
 CargaDatosInicial
 Esta clase contiene los siguientes elementos:
 Un objeto de la clase Clustering.
@@ -7,6 +8,7 @@ También, un JLabel que informa reducidamente lo que se tiene que hacer en esta 
 Tiene un JTextField para introducir el nombre de la persona y 4 JComboBox para seleccionar del 1 al 5 el nivel de interés por cada tema indicado en 4 JLabel ubicados al lado de cada cuadro.
 Debajo de la ventana se encuentran 2 JButton.
 El botón “Cargar” , cuando es seleccionado, genera un objeto de la clase VistaDatos, llama a la función generarGrupos. Esta función llama a la función generarGrupos del objeto Clustering. Envia los datos de las personas ingresadas al objeto VistaDatos. Envia los grupos generados al objeto VistaDatos. Y por último cierra esta ventana y abre la siguiente (VistsaDatos). 
+
 VistaDatos
 Esta clase tiene un hashMap para las personas con un String como clave y un array de enteros como valor (donde se guardan los intereses) y 2 Set que guarda los grupos que recibe de la clase CargaDatosInicial.
 En cuanto a elementos de interfaz, hay 2 JTable, una para mostrar los datos y otra para mostrar los grupos. Cada una está puesta en un JScrollPane. El motivo de esta implementación es que fue la solución que encontré para que muestre los títulos de las columnas.
@@ -21,6 +23,7 @@ La otra función principal es generarGrupos. Si la cantidad de personas ingresad
 Luego se llama a la función generarAGM que llama al método del mismo nombre del objeto Grafo y lo guarda en la variable del árbol generador mínimo.
 A continuación se llama a la función eliminarAristaDeMayorPeso que llama al método estático de Grafo que devuelve los vértices de la arista y lo guarda en un array vértices.
 Por último, llama a la función generarGrupo que recibe como parámetro los vértices de la arista eliminada y guarda el set que retorna en las variables grupo1 y grupo2.
+
 Grafo
 Esta clase que ya fue creada en la cursada.
 Lo que se agregó como variable fue una matriz que guarda los pesos de las aristas.
